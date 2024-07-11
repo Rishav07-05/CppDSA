@@ -3,7 +3,7 @@
 In this repository, you will find C++ implementations of commonly used data structures and algorithms. Each implementation is designed to demonstrate how these concepts work in practice, with an emphasis on clarity and educational value.
 
 # Algorithms
-
+ 
 Various algorithms are implemented, including:
 
 Sorting Algorithms (Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort)
