@@ -52,4 +52,4 @@ int main(){
         cin>> arr[i];
     }
     mergeSort(arr,0,n-1);
-}
+} 
