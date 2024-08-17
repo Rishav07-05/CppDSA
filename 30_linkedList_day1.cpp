@@ -1,5 +1,4 @@
-// Singly Linked List 
-
+// Singly Linked List
 
 // #include <iostream>
 // using namespace std;
@@ -10,25 +9,24 @@
 //     Node* next;
 
 //     Node(int data){
-//         this->data = data; // data 
+//         this->data = data; // data
 //         this->next = NULL; // address
 //     }
 
 //     //Destructor
 //     ~Node(){
 //         int value = this->data;
-//         // memory free 
+//         // memory free
 //         if(this->next != NULL){
 //             delete next;
-//             this->next =NULL;
+//             this->next = NULL;
 //         }
 //         cout<< "Memory is free for node with data: " << value << endl;
 //     }
 // };
 
-
 // void insertAtHead(Node* &head, int d){
-//     // new node created 
+//     // new node created
 //     Node* temp = new Node(d);
 //     temp -> next = head;
 //     head = temp;
@@ -46,7 +44,7 @@
 //     while(temp != NULL){
 //         cout << temp -> data<< " ";
 //         temp = temp -> next;
-//     } 
+//     }
 //     cout<< endl;
 // }
 
@@ -67,7 +65,7 @@
 //         insertAtTail(tail , d);
 //         return ;
 //     }
-//     // Creating a node for d 
+//     // Creating a node for d
 //     Node* nodeToInsert = new Node(d);
 //     nodeToInsert -> next = temp -> next;
 //     temp -> next = nodeToInsert;
@@ -98,10 +96,10 @@
 // }
 
 // int main(){
-//     Node* node1 = new Node(10);
+//     Node* node1 = new Node(10);            temp -> next -> next   Node* xy = temp -> next
 //     // cout<< node1 -> data << endl;
 //     // cout<< node1 -> next << endl;
-    
+
 //     Node* head = node1;
 //     Node* tail = node1;
 //     print(head);
@@ -119,9 +117,7 @@
 //     print(head);
 // }
 
-
-
-// Doubly Linked List 
+// Doubly Linked List
 
 // #include <iostream>
 // using namespace std;
@@ -139,7 +135,6 @@
 //         this->next = NULL;
 //     }
 // };
-
 
 // void print(Node* &head){
 //     Node* temp = head;
@@ -221,102 +216,117 @@
 //     print(head);
 // }
 
-
-
-// SinglyCircularly Linked List 
+// SinglyCircularly Linked List
 
 #include <iostream>
 using namespace std;
 
-class Node{
+class Node
+{
 public:
     int data;
-    Node* next;
+    Node *next;
 
-    // Constructor 
-    Node(int d){
+    // Constructor
+    Node(int d)
+    {
         this->data = d;
         this->next = NULL;
     }
 
     // destructor
 
-    ~Node(){
+    ~Node()
+    {
         int value = this->data;
-        if(this->next != NULL){
+        if (this->next != NULL)
+        {
             delete next;
             next = NULL;
         }
-        cout<< "Memory is free for node with data: " << value <<endl;
+        cout << "Memory is free for node with data: " << value << endl;
     }
 };
 
-void insertNode(Node* &tail , int element , int d){ 
+void insertNode(Node *&tail, int element, int d)
+{
     // empty list
-    if(tail == NULL){
-        Node* newNode = new Node(d);
+    if (tail == NULL)
+    {
+        Node *newNode = new Node(d);
         tail = newNode;
-        newNode -> next = newNode;
+        newNode->next = newNode;
     }
 
-    else{
-        // list is not empty  
+    else
+    {
+        // list is not empty
         // assuming that the element is present in the temp
-        Node* curr = tail;
-        while(curr->data != element){
-            curr = curr -> next;
+        Node *curr = tail;
+        while (curr->data != element)
+        {
+            curr = curr->next;
         }
         // element found -> curr is representing element node
-        Node* temp = new Node(d);
-        temp -> next = curr -> next;
-        curr -> next = temp;
+        Node *temp = new Node(d);
+        temp->next = curr->next;
+        curr->next = temp;
     }
 }
 
-void print(Node* tail){
-    Node* temp =  tail;
-    if(tail == NULL){
-        cout<< "Empty";
+void print(Node *tail)
+{
+    Node *temp = tail;
+    if (tail == NULL)
+    {
+        cout << "Empty";
         return;
     }
-    do{
-    cout<< tail -> data << " ";
-    tail = tail->next;
-    }while(tail != temp);
-    cout<< endl;
+    do
+    {
+        cout << tail->data << " ";
+        tail = tail->next;
+    } while (tail != temp);
+    cout << endl;
 }
 
-void deletionNode(Node* tail , int value){
-    // empty List 
-    if(tail == NULL){
-        cout<< "Empty";
+void deletionNode(Node *tail, int value)
+{
+    // empty List
+    if (tail == NULL)
+    {
+        cout << "Empty";
         return;
     }
-    else{
-        Node* prev = tail;
-        Node* curr = prev -> next;
+    else
+    {
+        Node *prev = tail;
+        Node *curr = prev->next;
 
-        while(curr -> data != value){
+        while (curr->data != value)
+        {
             prev = curr;
-            curr = curr -> next;
+            curr = curr->next;
         }
-        prev -> next = curr -> next;
+        prev->next = curr->next;
 
-        if(curr = prev){
+        if (curr = prev)
+        {
             tail = NULL;
         }
-        else if(tail == curr){
+        else if (tail == curr)
+        {
             tail = prev;
         }
-        curr -> next = NULL;
+        curr->next = NULL;
         delete curr;
     }
 }
 
-
-int main(){
-    Node* tail = NULL;
-    insertNode(tail , 5 , 44);
+int main()
+{
+    Node *tail = NULL;
+    insertNode(tail, 5, 44);
     print(tail);
 
     // insertNode(tail , 44 , 14);
@@ -331,6 +341,6 @@ int main(){
     // insertNode(tail , 14 , 84);
     // print(tail);
 
-    deletionNode(tail  , 44);
+    deletionNode(tail, 44);
     print(tail);
-}
+} 
