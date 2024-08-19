@@ -142,7 +142,7 @@ Node* floydDetectLoop(Node* head){
 }
 
 
-// printing the loop 
+// printing starting node 
 
 Node* getStartingNode(Node* head){
     if(head == NULL) return NULL;
