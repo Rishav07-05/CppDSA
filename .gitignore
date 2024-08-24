@@ -40,5 +40,6 @@
 39_insertAtBottom_Stack
 40_reverseStack_UsingRecursion
 41_sortStack_recursively
+42_redundantBrackets_Stack
 maps
 .vscode
