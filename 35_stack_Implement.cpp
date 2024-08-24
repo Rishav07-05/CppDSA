@@ -1,57 +1,70 @@
-// stack implementaion 
+// stack implementaion
 // Two type of stack implementaion => 1. Linked List , 2. Array
 
 #include <iostream>
 #include <stack>
 using namespace std;
 
-class Stack{
-    // properties 
-    public:
-        int *arr;
-        int top;
-        int size;
+class Stack
+{
+    // properties
+public:
+    int *arr;
+    int top;
+    int size;
 
     // behaviour
-    Stack(int size){
+    Stack(int size)
+    {
         this->size = size;
         arr = new int[size];
         top = -1;
     }
 
-    void push(int element){
-        if(size - top > 1){
+    void push(int element)
+    {
+        if (size - top > 1)
+        {
             top++;
             arr[top] = element;
         }
-        else{
+        else
+        {
             cout << "Stack Overflow" << endl;
         }
     }
 
-    void pop(){
-        if(top >= 0){
+    void pop()
+    {
+        if (top >= 0)
+        {
             top--;
         }
-        else{
+        else
+        {
             cout << "Stack underflow";
         }
     }
-    
-    int peek(){
-        if(top >= 0){
+
+    int peek()
+    {
+        if (top >= 0)
+        {
             return arr[top];
         }
-        else{
+        else
+        {
             cout << "Stack is Empty" << endl;
             return -1;
         }
     }
 
-    bool isEmpty(){
-        if(top == -1)
+    bool isEmpty()
+    {
+        if (top == -1)
             return true;
-        else{
+        else
+        {
             return false;
         }
     }
@@ -74,8 +87,8 @@ int main()
     st.pop();
 
     cout << st.peek() << endl;
-    
+
     st.pop();
-    
+
     cout << st.peek() << endl;
 }
