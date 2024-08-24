@@ -39,5 +39,6 @@
 38_validParenthesis_Stack
 39_insertAtBottom_Stack
 40_reverseStack_UsingRecursion
+41_sortStack_recursively
 maps
 .vscode
