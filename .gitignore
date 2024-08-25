@@ -41,5 +41,6 @@
 40_reverseStack_UsingRecursion
 41_sortStack_recursively
 42_redundantBrackets_Stack
+43_minBrackReversal_Stack
 maps
 .vscode
