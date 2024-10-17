@@ -16,6 +16,7 @@ public:
     }
 };
 
+
 node *creatingTree(node *root)
 {
     cout << "Enter the data: " << endl;
