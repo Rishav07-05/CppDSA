@@ -55,5 +55,6 @@
 54_binaryTree_buildFromLevelOrder
 55_binaryTree_depthOfTree
 56_binaryTree_diameterOfTree
+57_binaryTree_balancedTreeCheck
 maps
 .vscode
