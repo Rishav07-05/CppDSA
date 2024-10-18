@@ -54,5 +54,6 @@
 53_binaryTree_Traversals
 54_binaryTree_buildFromLevelOrder
 55_binaryTree_depthOfTree
+56_binaryTree_diameterOfTree
 maps
 .vscode
