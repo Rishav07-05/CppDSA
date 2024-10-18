@@ -37,15 +37,16 @@ bool checkSum(node* root){
     bool right = checkSum(root->right);
     int lsum = 0;
     int rsum = 0;
-    if (left)
+    if (root -> left != NULL)
     {
-        lsum += root->data;
+        lsum = root->left->data;
     }
-    if (right)
+    if (root -> right != NULL)
     {
-        rsum += root->data;
+        rsum = root->right->data;
     }
-    bool currentNodeData(root->data = lsum + rsum);
+    bool currentNodeData(root->data == lsum + rsum);
+    
     return left && right && currentNodeData;
 }
 
