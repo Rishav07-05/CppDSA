@@ -47,12 +47,40 @@ void inorder(node *root)
     inorder(root->right);
 }
 
+
+void preorder(node *root)
+{
+    if (root == nullptr)
+        return;
+    cout << root->data << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
+
+
+void postorder(node *root)
+{
+    if (root == nullptr)
+        return;
+    postorder(root->left);
+    postorder(root->right);
+    cout << root->data << " ";
+}
+
 int main()
 {
     node *root = nullptr;
     cout << "Enter data to create BST (enter -1 to stop): " << endl;
     takeInput(root);
-    cout << "Printing the BST: " << endl;
+    cout << "Printing the BST with Inorder: " << endl;
     inorder(root);
+    cout << endl;
+
+    cout << "Printing the BST with preorder: " << endl;
+    preorder(root);
+    cout << endl;
+
+    cout << "Printing the BST with postorder: " << endl;
+    postorder(root);
     return 0;
 }
