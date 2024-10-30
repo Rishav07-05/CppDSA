@@ -80,5 +80,6 @@
 79_binarySearchTree_validate_Bst
 80_binarySearchTree_kth_Smallest
 81_binarySearchTree_Predecessor
+82_binarySearchTree_LCA
 maps
 .vscode
