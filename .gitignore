@@ -84,5 +84,6 @@
 83_binarySearchTree_twoSumInBST
 84_binarySearchTree_flatten_BST_To_LL
 85_binaryTreeSearch_isBalancedBST
+86_binarySearchTree_mergeTwoBST
 maps
 .vscode
