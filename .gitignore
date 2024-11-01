@@ -93,5 +93,6 @@
 92_heap_kthSmallest
 93_heap_IsBinarytree_Heap
 94_heap_mergeTwoHeap
+95_heap_minCostOfRopes
 maps
 .vscode
