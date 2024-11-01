@@ -90,5 +90,6 @@
 89_heap_heapifyAlgo
 90_heap_heapSort
 91_heap_heapSTL
+92_heap_kthSmallest
 maps
 .vscode
