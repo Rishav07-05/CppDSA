@@ -35,7 +35,7 @@ vector<int> mergeKSortedArrays(vector<vector<int>> &arr, int k)
 
     vector<int> ans;
 
-    while(minHeap.size() > 1){
+    while(minHeap.size() > 0){
         node *temp = minHeap.top();
 
         ans.push_back(temp -> data);
